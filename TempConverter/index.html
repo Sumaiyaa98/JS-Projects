@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="icon" href="tcIcon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allison&family=Allura&family=Amiko:wght@400;600;700&family=Arizonia&family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100;1,100&family=Kaushan+Script&family=Lora:ital,wght@0,400..700;1,400..700&family=Parisienne&family=Playwrite+AU+VIC+Guides&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rochester&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    
+</head>
+<body>
+    <div class="box">
+       
+        <div class="mainBox">
+            <div class="left">
+                <h1 id="result">32</h1>
+                <h5 id="tempSymbol"><sub>°F</sub></h5>
+            </div>
+            
+                
+                <div class="right">
+                    <h1>Temperature Converter</h1>
+                    
+                    <!-- Input Degree Section -->
+                    <label for="degreeInput" id="dd">Degree</label>
+                    <div class="inputBox">
+                        
+                        <input type="number" id="degreeInput">
+                        
+                        <!-- Input Unit Selection -->
+                        <!-- <label for="inputUnit"></label> -->
+                        <select name="degreeInput" id="inputUnit">
+                            <option value="celcius" id="celcius">°C</option>
+                            <option value="fahrenheit" id="fehrenheit">°F</option>
+                        </select>
+
+                    </div>
+                    
+                   
+                        <label for="outputUnit" id="cc">Convert In</label>
+                        <!-- Output Unit Selection -->
+                        <select name="outputUnit" id="outputUnit">
+                            <option value="celcius">Celcius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                        </select>
+
+                    
+                    
+                    <!-- Convert Button -->
+                    <button id="convertBtn">Convert</button>
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
