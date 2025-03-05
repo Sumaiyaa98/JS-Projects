@@ -39,7 +39,7 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(temp.jpeg);
+    background-image: url(/TempConverter/temp.jpeg);
     background-size: contain;
     /* background-repeat: no-repeat; */
 }
