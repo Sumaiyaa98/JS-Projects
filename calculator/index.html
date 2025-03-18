@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="calculator favicon.png">
+
+    <title>Calculator</title>
+</head>
+<body class="bg-[#fccaff]">
+    <div class="flex items-center justify-center min-h-screen">
+
+ 
+    <div id="calculator" class="bg-[#ffffff] rounded-[37px] p-2 pb-4 shadow-lg shadow-gray-600 border-4 border-[#ffa4dc]" >
+
+        <input readonly class="bg-[#edf3f3] max-w-[400px] m-4 h-20 rounded-[37px] w-[265px] shadow-lg shadow-gray-400 border-4 border-[#ffa4dc] text-right text-5xl pr-5 pl-5 text-gray-500 placeholder:text-gray-500" placeholder="0">
+
+        <div class=" grid grid-cols-4 gap-y-3 gap-x-1 max-w-[300px] bg-[#ffffff] p-3 h-[380px] pl-6">
+            <button onclick="clearDislpay()" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">clr</button>
+            <button onclick="clearInput()" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">DEL</button>
+            <button onclick="appendToDislpay('%')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">%</button>
+            <button onclick="appendToDislpay('/')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">/</button>
+            <button onclick="appendToDislpay('7')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">7</button>
+            <button onclick="appendToDislpay('8')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">8</button>
+            <button onclick="appendToDislpay('9')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">9</button>
+             <button onclick="appendToDislpay('*')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">*</button>
+            <button onclick="appendToDislpay('4')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">4</button>
+            <button onclick="appendToDislpay('5')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">5</button>
+            <button onclick="appendToDislpay('6')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">6</button>
+            <button onclick="appendToDislpay('-')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">-</button>
+            <button onclick="appendToDislpay('1')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">1</button>
+            <button onclick="appendToDislpay('2')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">2</button>
+            <button onclick="appendToDislpay('3')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">3</button>
+            <button onclick="appendToDislpay('+')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">+</button>
+            <button onclick="appendToDislpay('.')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">.</button>
+            <button onclick="appendToDislpay('0')" class="w-12 h-12 bg-[#ebeff1] rounded-full font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#faa5d6] cursor-pointer active:bg-[#f9bbe1]">0</button>
+            <button onclick="calculate()" class="w-[120px] h-12 bg-[#faa5d6] rounded-3xl font-medium text-[17px] shadow-lg shadow-gray-400 text-center hover:bg-[#f8b0dc] cursor-pointer active:bg-[#fac3e5]">=</button>
+           
+        </div>
+    </div>
+</div>
+        <script src="script.js"></script>
+</body>
+</html>
